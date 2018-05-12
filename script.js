@@ -1,6 +1,6 @@
-var $cardTitle = $('.main-input-field');
+var $cardTitle = $('.title-input-field');
 var $cardList = $('.card-list');
-var $cardURL = $('.main-inputURL-field');
+var $cardURL = $('.main-URL-input-field');
 var $enterButton = $('.enter-button');
 
 $cardList.on('click', deleteCard);
