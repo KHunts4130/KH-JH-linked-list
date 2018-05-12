@@ -36,7 +36,7 @@ p {
   margin: 0 auto;
   background-color: #455A64;
   box-sizing: border-box;
-  width: 85%;
+  width: 85vw%;
 }
 
 .title-input {
@@ -53,18 +53,19 @@ p {
   padding-bottom: 11px;
 }
 
-.main-URL-input-fiel,
+.main-URL-input-field,
 .title-input-field {
   margin-bottom: 58px;
+  margin-left: 1.4em;
   color: #445A64;
-  width: 100%;
+  width: 90%;
   height: 45px;
   padding: 1px 0 1px 15px;
   font-size: 30px;
   outline: none;
 }
 
-.main-URL-input-fiel::placeholder,
+.main-URL-input-field::placeholder,
 .title-input-field::placeholder::placeholder {
   color: #BDBFC1;
   font-size: 30px;
@@ -73,8 +74,9 @@ p {
 .enter-button {
   background-color: #FFC107;
   color: #FFFFFF;
-  width: 100%;
+  width: 90%;
   height: 45px;
+  margin-left: 2.1em;
   margin-bottom: 20px;
   outline: none;
   font-size: 20px;
@@ -88,7 +90,6 @@ p {
 .display-container {
   background-color: #CFD8DC;
   width: 51%;
-  height: 100vh;
   display: inline-block;
   overflow-x: scroll;
   vertical-align: top;
