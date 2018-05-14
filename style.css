@@ -36,7 +36,7 @@ p {
   margin: 0 auto;
   background-color: #455A64;
   box-sizing: border-box;
-  width: 85vw%;
+  width: 50vw%;
 }
 
 .title-input {
@@ -110,6 +110,70 @@ p {
   padding-left: 10px;
 }
 
+.card-link {
+  display: block;  
+  color: #607D8B;
+  margin-top: 10px;
+  margin-left: 16px;
+  width: 92%;
+  font-size: 22px;
+  text-decoration: underline #F2F4F4;
+  border-bottom: solid;
+  border-width: 2px;
+  border-color: #CFD8DC;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+.card-button:hover,
+.card-link:hover
+ {
+  text-decoration: underline #FFC107;
+  font-weight: 800;
+  cursor: pointer;
+} 
+
+.card-button { 
+  color: #445A64;
+  color: none;
+  text-decoration: underline #F2F4F4;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.card-button-read {
+  left: 10px;
+  top: 50px;
+  background-color: transparent;
+  color: #455A64;
+  margin: 45px 10px;
+  }
+
+.card-button-read-clicked {
+  background-color: #F2F4F4;
+}
+
+.card-button-read: active{
+  background-color: #F2F4F4
+  font-weight: 800; 
+}
+
+.card-button-delete {
+  float: right;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 45px 10px;
+}
+
+.card-button-delete-read {
+  background-color: transparent;
+}
+
+.read {
+  background-color: #F2F4F4;
+}
 
 
 
