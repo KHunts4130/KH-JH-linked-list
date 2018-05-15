@@ -1,4 +1,4 @@
-
+// Variables
 
 var $cardTitle = $('.title-input-field');
 var $cardURL = $('.main-URL-input-field');
@@ -8,8 +8,11 @@ var $removeReadCards = $('.remove-read-cards')
 
 // Event listeners
 
-$enterButton.on('click', doesCardGetMade);
+$cardTitle.on('keyup', enableSubmitButton);
+$cardURL.on('keyup', enableSubmitButton);
+$enterButton.on('click', makeCard);
 $cardList.on('click', deleteCard);
+// $cardList.on('click', markRead);
 $removeReadCards.on('click', removeReadCards);
 
 // functions
@@ -25,17 +28,10 @@ function makeCard() {
     <button class="card-button card-button-delete">Delete</button>
     `);
   $cardList.append(createCard); 
+  $enterButton.prop('disabled', true);
   var $readButton = $('.card-button-read');
   $readButton.on('click', markRead)
   clearInputFields();
-}
-
-function checkTitleField() {
-  titleCheck = $cardTitle.val() || 'enter a title' 
-}
-
-function checkURLField() {
-  UrlCheck = $cardURL.val() || 'enter a website'
 }
 
 function clearInputFields() {
@@ -43,13 +39,11 @@ function clearInputFields() {
   $cardURL.val('');
 }
 
-function doesCardGetMade() {
-  checkTitleField();
-  checkURLField();
+function enableSubmitButton() {
   if ($cardTitle.val() === '' || $cardURL.val() === '') {
-    alert(titleCheck + ' ' + UrlCheck)
+    $enterButton.prop('disabled', true)
   } else {
-  makeCard(); 
+    $enterButton.prop('disabled', false)
   }
 };
 
