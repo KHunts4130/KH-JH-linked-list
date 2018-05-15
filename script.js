@@ -1,4 +1,4 @@
-// Variables
+
 
 var $cardTitle = $('.title-input-field');
 var $cardURL = $('.main-URL-input-field');
