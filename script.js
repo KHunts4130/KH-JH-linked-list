@@ -8,7 +8,8 @@ var $cardList = $('.card-list');
 // Event listeners
 
 $enterButton.on('click', doesCardGetMade);
-
+$cardList.on('click', deleteCard);
+$cardList.on('click', markRead);
 // functions
 
 function makeCard() {
@@ -48,13 +49,13 @@ function doesCardGetMade() {
   }
 };
 
+function deleteCard(event) {
+  if (event.target.matches('.card-button-delete')){
+  event.target.closest('li').remove();
+  }
+}
 
-
-
-
-
-
-
-
-
+function markRead() {
+  console.log("markRead function");
+}
 
