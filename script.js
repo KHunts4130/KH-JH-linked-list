@@ -13,9 +13,8 @@ $enterButton.on('click', doesCardGetMade);
 
 function makeCard() {
   var createCard = $('<li>');
-  var cardURL = $cardURL.val();
+  var cardURL = 'https://' + $cardURL.val();
   var cardTitle = $cardTitle.val();
-  // stuff and junk delte me
  createCard.html(`
     <h3 class="main-right-card-title">${cardTitle}</h3>
     <a target="_blank" class="card-link" href="${cardURL}">${$cardURL.val()}</a>
@@ -27,11 +26,11 @@ function makeCard() {
 }
 
 function checkTitleField() {
-  titleCheck = $cardTitle.val() || 'enter a title' 
+  titleCheck = $cardTitle.val() || 'Enter a title and' 
 }
 
 function checkURLField() {
-  UrlCheck = $cardURL.val() || 'enter a web site'
+  UrlCheck = $cardURL.val() || 'enter a website'
 }
 
 function clearInputFields() {
@@ -47,7 +46,7 @@ function doesCardGetMade() {
   } else {
   makeCard(); 
   }
-}
+};
 
 
 
