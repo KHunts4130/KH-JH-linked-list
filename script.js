@@ -15,6 +15,7 @@ function makeCard() {
   var createCard = $('<li>');
   var cardURL = $cardURL.val();
   var cardTitle = $cardTitle.val();
+  // stuff and junk delte me
  createCard.html(`
     <h3 class="main-right-card-title">${cardTitle}</h3>
     <a target="_blank" class="card-link" href="${cardURL}">${$cardURL.val()}</a>
