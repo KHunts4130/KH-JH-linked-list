@@ -13,10 +13,13 @@ $enterButton.on('click', doesCardGetMade);
 
 function makeCard() {
   var createCard = $('<li>');
-  createCard.html(`
-    <h3 class="main-right-card-title">${$cardTitle.val()}</h3>
-    <a class="card-link" href="">${$cardURL.val()}</a>
-    <button class="card-button card-button-read">Read</button>
+  var cardURL = $cardURL.val();
+  var cardTitle = $cardTitle.val();
+  // stuff and junk delte me
+ createCard.html(`
+    <h3 class="main-right-card-title">${cardTitle}</h3>
+    <a target="_blank" class="card-link" href="${cardURL}">${$cardURL.val()}</a>
+    <button class="card-button card-button-read" >Read</button>
     <button class="card-button card-button-delete">Delete</button>
     `);
   $cardList.append(createCard); 
