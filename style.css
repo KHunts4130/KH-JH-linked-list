@@ -87,6 +87,18 @@ p {
   background-color: #FFD773;
 }
 
+.remove-read-cards {
+  background-color: #FFC107;
+  color: #FFFFFF;
+  width: 90%;
+  height: 45px;
+  margin-left: 2.1em;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 20px;
+  font-weight: 800;
+}
+
 .display-container {
   background-color: #CFD8DC;
   width: 51%;
@@ -150,14 +162,18 @@ p {
   margin: 45px 10px;
   }
 
+.read {
+  background-color: #F2F4F4;
+}
+
 .card-button-read-clicked {
   background-color: #F2F4F4;
 }
 
-.card-button-read: active{
+/*.card-button-read: active{
   background-color: #F2F4F4
   font-weight: 800; 
-}
+}*/
 
 .card-button-delete {
   float: right;
@@ -171,9 +187,7 @@ p {
   background-color: transparent;
 }
 
-.read {
-  background-color: #F2F4F4;
-}
+
 
 
 
