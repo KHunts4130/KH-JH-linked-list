@@ -67,7 +67,6 @@ function removeReadCards() {
 }
 
 function cardCount() {
-  console.log('cardCount function, boom!')
   $numberCards = $('.cards').length;
   $readCards = $('li .read').length;
   $unReadCards = $numberCards - $readCards;
