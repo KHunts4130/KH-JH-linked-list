@@ -22,7 +22,7 @@ function makeCard() {
   var cardURL = $cardURL.val();
   var cardTitle = $cardTitle.val();
  createCard.html(`
-    <h3 class="main-right-card-title">${cardTitle}</h3>
+    <h3 class="card-title">${cardTitle}</h3>
     <a target="_blank" class="card-link" href="${'https://' + cardURL}">${cardURL}</a>
     <button class="card-button card-button-read" >Read</button>
     <button class="card-button card-button-delete">Delete</button>
