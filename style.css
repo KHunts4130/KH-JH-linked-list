@@ -8,7 +8,7 @@
 
 li {
   background-color: #FFFFFF;
-  border: 1px solid black;
+  border: 2px solid #607D8B;
   box-sizing: content-box;
   height: 200px;
   list-style-type: none;
@@ -38,7 +38,9 @@ p {
 
 .input-container {
   margin: 20px auto;
-  width: 90%;
+  margin-top: 200px;
+  width: 50%;
+  position: fixed;
 }
 
 .title-input {
@@ -59,7 +61,9 @@ p {
   color: #445A64;
   font-size: 30px;
   height: 45px;
-  margin: 10px .5em 60px;
+  margin: 30px .5em 50px;
+  margin-left: 30px;
+  margin-bottom: 30px;
   outline: none;
   width: 90%;
 }
@@ -77,6 +81,7 @@ p {
   font-weight: 800;
   height: 45px;
   margin: 20px 0 20px .5em;
+  margin-left: 30px;
   outline: none;
   width: 90%;
 }
@@ -88,6 +93,7 @@ p {
 .display-container {
   background-color: #CFD8DC;
   grid-area: display-container;
+  overflow-y: scroll;
 }
 
 .card-list {
@@ -105,16 +111,20 @@ p {
 }
 
 .card-link {
-  border-bottom: solid;
-  border-color: #CFD8DC;
-  border-width: 2px;
-  color: #607D8B;
-  display: block;  
-  font-size: 22px;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  text-decoration: underline #F2F4F4;
-  width: 92%;
+    border-bottom: solid;
+    border-top: solid;
+    border-color: #CFD8DC;
+    border-width: 2px;
+    color: #607D8B;
+    display: block;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 22px;
+    padding-bottom: 30px;
+    padding-top: 35px;
+    padding-left: 3px;
+    text-decoration: underline #F2F4F4;
+    width: 92%;
 }
 
 .card-button:hover,
@@ -136,6 +146,18 @@ p {
 .card-button-read {
   background-color: transparent;
   color: #455A64;
+  margin-left: 22px;
+  margin-top: 18px;
+}
+
+.card-title {
+    margin-left: 20px;
+    font-family: bold;
+    padding-top: 5px;
+}
+
+.counters {
+  text-align: center;
 }
 
 .read {
@@ -150,5 +172,8 @@ p {
   background-color: transparent;
   border: none;
   outline: none;
+  float: right;
+  margin-top: 18px;
+  margin-right: 30px;
 }
 
