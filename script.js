@@ -53,10 +53,9 @@ function deleteCard(event) {
 }
 
 function markRead(event) {
-  console.log(event);
-  console.log(this);
   if (event.target.matches('.card-button-read')) {
     $(this).parent().toggleClass('read');
+    $(this).toggleClass('card-read-button-clicked')
   } 
   cardCount();
 }
@@ -68,7 +67,7 @@ function removeReadCards() {
 
 function cardCount() {
   $numberCards = $('.cards').length;
-  $readCards = $('li .read').length;
+  $readCards = $('.read').length;
   $unReadCards = $numberCards - $readCards;
   $('.totalcards').text('Number of total cards: ' + $numberCards);
   $('.cardsRead').text('Number of cards read: ' + $readCards);

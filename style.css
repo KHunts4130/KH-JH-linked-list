@@ -8,12 +8,11 @@
 
 li {
   background-color: #FFFFFF;
-  height: 200px;
   border: 1px solid black;
   box-sizing: content-box;
+  height: 200px;
   list-style-type: none;
   margin: 10px 0 20px;
-  
  }
 
 main {
@@ -33,27 +32,26 @@ p {
 }
 
 .main-container {
-  grid-area: main-container;
   background-color: #455A64;  
+  grid-area: main-container;
 }
 
 .input-container {
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 20px auto;
   width: 90%;
 }
 
 .title-input {
   color: #FFFFFF;
-  text-align: center;
   font-size: 54px;
   font-weight: 800;
+  text-align: center;
 }
 
 .input-logo {
+  padding-bottom: 11px;
   vertical-align: middle;
   width: 20%;
-  padding-bottom: 11px;
 }
 
 .main-URL-input-field,
@@ -75,12 +73,12 @@ p {
 .button-style {
   background-color: #FFC107;
   color: #FFFFFF;
-  width: 90%;
+  font-size: 20px;
+  font-weight: 800;
   height: 45px;
   margin: 20px 0 20px .5em;
   outline: none;
-  font-size: 20px;
-  font-weight: 800;
+  width: 90%;
 }
 
 .button-style:hover {
@@ -92,63 +90,60 @@ p {
   grid-area: display-container;
 }
 
-.card-list{
-  color: #445A64;
-  margin-top: 5px;
-  margin-left: 16px;
-  font-weight: 800;
-  font-size: 30px;
-  width:92%;
+.card-list {
   border-bottom: solid;
-  border-width: 2px;
   border-color: #CFD8DC;
+  border-width: 2px;
+  color: #445A64;
+  font-size: 30px;
+  font-weight: 800;
+  margin-left: 16px;
+  margin-top: 5px;
   padding-bottom: 20px;
   padding-left: 10px;
+  width:92%;
 }
 
 .card-link {
-  display: block;  
-  color: #607D8B;
-  margin-top: 10px;
-  margin-left: 16px;
-  width: 92%;
-  font-size: 22px;
-  text-decoration: underline #F2F4F4;
   border-bottom: solid;
-  border-width: 2px;
   border-color: #CFD8DC;
+  border-width: 2px;
+  color: #607D8B;
+  display: block;  
+  font-size: 22px;
   padding-bottom: 20px;
   padding-left: 10px;
+  text-decoration: underline #F2F4F4;
+  width: 92%;
 }
 
 .card-button:hover,
-.card-link:hover
- {
-  text-decoration: underline #FFC107;
-  font-weight: 800;
+.card-link:hover {
   cursor: pointer;
+  font-weight: 800;
+  text-decoration: underline #FFC107;
 } 
 
 .card-button { 
+  border: none;
   color: #445A64;
   color: none;
-  text-decoration: underline #F2F4F4;
-  border: none;
-  outline: none;
   font-size: 14px;
+  outline: none;
+  text-decoration: underline #F2F4F4;
 }
 
 .card-button-read {
   background-color: transparent;
   color: #455A64;
-  }
-
-.read {
-  background-color: red;
 }
 
-.card-button-read-clicked {
+.read {
   background-color: #F2F4F4;
+}
+
+.card-read-button-clicked {
+  color: #F05A28;
 }
 
 .card-button-delete {
@@ -157,6 +152,3 @@ p {
   outline: none;
 }
 
-.card-button-delete-read {
-  background-color: transparent;
-}
