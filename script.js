@@ -12,13 +12,13 @@ $cardTitle.on('keyup', enableSubmitButton);
 $cardURL.on('keyup', enableSubmitButton);
 $enterButton.on('click', makeCard);
 $cardList.on('click', deleteCard);
-// $cardList.on('click', markRead);
+$cardList.on('click', 'li .card-button-read', markRead);
 $removeReadCards.on('click', removeReadCards);
 
 // functions
 
 function makeCard() {
-  var createCard = $('<li>');
+  var createCard = $('<li class="cards">');
   var cardURL = $cardURL.val();
   var cardTitle = $cardTitle.val();
  createCard.html(`
@@ -29,9 +29,7 @@ function makeCard() {
     `);
   $cardList.append(createCard); 
   $enterButton.prop('disabled', true);
-  var $readButton = $('.card-button-read');
-  $readButton.on('click', markRead)
-  clearInputFields();
+  cardCount();
 }
 
 function clearInputFields() {
@@ -51,18 +49,33 @@ function deleteCard(event) {
   if (event.target.matches('.card-button-delete')) {
   event.target.closest('li').remove();
   }
+  cardCount()
 }
 
 function markRead(event) {
+  console.log(event);
+  console.log(this);
   if (event.target.matches('.card-button-read')) {
     $(this).parent().toggleClass('read');
   } 
+  cardCount();
 }
 
 function removeReadCards() {
   $('.read').remove();
+  cardCount()
 }
 
+function cardCount() {
+  console.log('cardCount function, boom!')
+  $numberCards = $('.cards').length;
+  $readCards = $('li .read').length;
+  $unReadCards = $numberCards - $readCards;
+  $('.totalcards').text('Number of total cards: ' + $numberCards);
+  $('.cardsRead').text('Number of cards read: ' + $readCards);
+  // $('.cardsUnread').text('Number of cards unread: ' + $cardsUnread);
+  clearInputFields();
+}
 
 
 

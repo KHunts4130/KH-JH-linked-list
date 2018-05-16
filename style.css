@@ -17,30 +17,33 @@ li {
  }
 
 main {
-  display: flex;
-  width: 100%;
+  display: grid;
+  grid-template-columns:  repeat(4, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  grid-template-areas: 
+    "main-container main-container display-container display-container"
+    "main-container main-container display-container display-container"
+    "main-container main-container display-container display-container"
+    "main-container main-container display-container display-container";
+  margin: 0 auto;
 }
 
 p {
  color: white;
 }
 
-.main-left {
-  display: inline-block;
-  background-color: #455A64;
-  width: 50vw;
-  height: 100vh;
+.main-container {
+  grid-area: main-container;
+  background-color: #455A64;  
 }
 
-.main-container {
+.input-container {
   margin: 0 auto;
-  background-color: #455A64;
-  box-sizing: border-box;
-  width: 50vw%;
+  margin-top: 20px;
+  width: 90%;
 }
 
 .title-input {
-  margin: 30% 0 40px;
   color: #FFFFFF;
   text-align: center;
   font-size: 54px;
@@ -55,57 +58,38 @@ p {
 
 .main-URL-input-field,
 .title-input-field {
-  margin-bottom: 58px;
-  margin-left: 1.4em;
   color: #445A64;
-  width: 90%;
-  height: 45px;
-  padding: 1px 0 1px 15px;
   font-size: 30px;
+  height: 45px;
+  margin: 10px .5em 60px;
   outline: none;
+  width: 90%;
 }
 
 .main-URL-input-field::placeholder,
-.title-input-field::placeholder::placeholder {
+.title-input-field::placeholder: {
   color: #BDBFC1;
   font-size: 30px;
 }
 
-.enter-button {
+.button-style {
   background-color: #FFC107;
   color: #FFFFFF;
   width: 90%;
   height: 45px;
-  margin-left: 2.1em;
-  margin-bottom: 20px;
+  margin: 20px 0 20px .5em;
   outline: none;
   font-size: 20px;
   font-weight: 800;
 }
 
-.enter-button:hover {
+.button-style:hover {
   background-color: #FFD773;
-}
-
-.remove-read-cards {
-  background-color: #FFC107;
-  color: #FFFFFF;
-  width: 90%;
-  height: 45px;
-  margin-left: 2.1em;
-  margin-bottom: 20px;
-  outline: none;
-  font-size: 20px;
-  font-weight: 800;
 }
 
 .display-container {
   background-color: #CFD8DC;
-  width: 51%;
-  display: inline-block;
-  vertical-align: top;
-  padding: 10px 20px;
-
+  grid-area: display-container;
 }
 
 .card-list{
@@ -155,43 +139,24 @@ p {
 }
 
 .card-button-read {
-  left: 10px;
-  top: 50px;
   background-color: transparent;
   color: #455A64;
-  margin: 45px 10px;
   }
 
 .read {
-  background-color: #F2F4F4;
+  background-color: red;
 }
 
 .card-button-read-clicked {
   background-color: #F2F4F4;
 }
 
-/*.card-button-read: active{
-  background-color: #F2F4F4
-  font-weight: 800; 
-}*/
-
 .card-button-delete {
-  float: right;
   background-color: transparent;
   border: none;
   outline: none;
-  margin: 45px 10px;
 }
 
 .card-button-delete-read {
   background-color: transparent;
 }
-
-
-
-
-
-
-
-
-
