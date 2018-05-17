@@ -1,4 +1,3 @@
-// Variables
 
 var $cardTitle = $('.title-input-field');
 var $cardURL = $('.URL-input-field');
@@ -6,16 +5,12 @@ var $enterButton = $('.enter-button');
 var $cardList = $('.card-list');
 var $removeReadCards = $('.remove-read-cards')
 
-// Event listeners
-
 $cardTitle.on('keyup', enableSubmitButton);
 $cardURL.on('keyup', enableSubmitButton);
-$enterButton.on('click', makeCard);
+$enterButton.on('click', urlValidate);
 $cardList.on('click', 'li .card-button-delete', deleteCard);
 $cardList.on('click', 'li .card-button-read', markRead);
 $removeReadCards.on('click', removeReadCards);
-
-// functions
 
 function makeCard() {
   var createCard = $('<li class="cards">');
@@ -74,5 +69,15 @@ function cardCount() {
   $('.cardsUnread').text('Number of cards unread: ' + $unReadCards);
   clearInputFields();
 }
- 
 
+function urlValidate(){
+  regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
+    if (regexp.test($cardURL.val())) {
+      makeCard();
+    } else {
+      alert('Please enter a valid URL.');
+      clearInputFields();
+    }
+}
+
+ 
