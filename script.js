@@ -1,7 +1,7 @@
 // Variables
 
 var $cardTitle = $('.title-input-field');
-var $cardURL = $('.main-URL-input-field');
+var $cardURL = $('.URL-input-field');
 var $enterButton = $('.enter-button');
 var $cardList = $('.card-list');
 var $removeReadCards = $('.remove-read-cards')
@@ -11,7 +11,7 @@ var $removeReadCards = $('.remove-read-cards')
 $cardTitle.on('keyup', enableSubmitButton);
 $cardURL.on('keyup', enableSubmitButton);
 $enterButton.on('click', makeCard);
-$cardList.on('click', deleteCard);
+$cardList.on('click', 'li .card-button-delete', deleteCard);
 $cardList.on('click', 'li .card-button-read', markRead);
 $removeReadCards.on('click', removeReadCards);
 
@@ -47,7 +47,7 @@ function enableSubmitButton() {
 
 function deleteCard(event) {
   if (event.target.matches('.card-button-delete')) {
-  event.target.closest('li').remove();
+    $(this).parent().remove();
   }
   cardCount()
 }
@@ -71,9 +71,8 @@ function cardCount() {
   $unReadCards = $numberCards - $readCards;
   $('.totalcards').text('Number of total cards: ' + $numberCards);
   $('.cardsRead').text('Number of cards read: ' + $readCards);
-  // $('.cardsUnread').text('Number of cards unread: ' + $cardsUnread);
+  $('.cardsUnread').text('Number of cards unread: ' + $unReadCards);
   clearInputFields();
 }
-
-
+ 
 

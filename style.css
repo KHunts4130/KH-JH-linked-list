@@ -12,8 +12,8 @@ li {
   box-sizing: content-box;
   height: 200px;
   list-style-type: none;
-  margin: 10px 0 20px;
- }
+  margin: 20px auto 20px;
+}
 
 main {
   display: grid;
@@ -37,15 +37,15 @@ p {
 }
 
 .input-container {
-  margin: 20px auto;
-  margin-top: 200px;
+  margin: 150px auto;
   width: 50%;
   position: fixed;
 }
 
 .title-input {
   color: #FFFFFF;
-  font-size: 54px;
+  /*font-size: 83px;*/
+  font-size: 5em;
   font-weight: 800;
   text-align: center;
 }
@@ -56,20 +56,16 @@ p {
   width: 20%;
 }
 
-.main-URL-input-field,
-.title-input-field {
+.input-field-styling {
   color: #445A64;
   font-size: 30px;
   height: 45px;
-  margin: 10px .5em 50px;
-  margin-left: 30px;
-  margin-bottom: 30px;
+  margin: 10px .5em 30px 30px;
   outline: none;
   width: 90%;
 }
 
-.main-URL-input-field::placeholder,
-.title-input-field::placeholder: {
+.input-field-styling::placeholder {
   color: #BDBFC1;
   font-size: 30px;
 }
@@ -80,8 +76,7 @@ p {
   font-size: 20px;
   font-weight: 800;
   height: 45px;
-  margin: 20px 0 20px .5em;
-  margin-left: 30px;
+  margin: 20px 0 20px 30px;
   outline: none;
   width: 90%;
 }
@@ -103,33 +98,27 @@ p {
   color: #445A64;
   font-size: 30px;
   font-weight: 800;
-  margin-left: 16px;
-  margin-top: 5px;
+  margin: 5px auto;
   padding-bottom: 20px;
-  padding-left: 10px;
-  width:92%;
+  width: 92%;
 }
 
 .card-link {
   border-bottom: solid;
-  border-top: solid;
   border-color: #CFD8DC;
+  border-top: solid;
   border-width: 2px;
   color: #607D8B;
   display: block;
-  margin-top: 10px;
-  margin-left: 20px;
   font-size: 22px;
-  padding-bottom: 30px;
-  padding-top: 35px;
-  padding-left: 3px;
+  margin: 10px 0 0 20px;
+  overflow: hidden;
+  padding: 35px 0 30px 3px;
   text-decoration: underline #F2F4F4;
   width: 92%;
-  overflow: hidden;
 }
 
-.card-button:hover,
-.card-link:hover {
+.card-button:hover {
   cursor: pointer;
   font-weight: 800;
   text-decoration: underline #FFC107;
@@ -147,15 +136,14 @@ p {
 .card-button-read {
   background-color: transparent;
   color: #455A64;
-  margin-left: 22px;
-  margin-top: 18px;
+  margin: 18px 0 0 22px;
 }
 
 .card-title {
-    margin-left: 20px;
-    font-family: bold;
-    padding-top: 5px;
-    overflow: hidden;
+  font-family: bold;
+  margin-left: 20px;
+  overflow: hidden;
+  padding-top: 5px;
 }
 
 .counters {
@@ -173,10 +161,9 @@ p {
 .card-button-delete {
   background-color: transparent;
   border: none;
-  outline: none;
   float: right;
-  margin-top: 18px;
-  margin-right: 30px;
+  margin: 18px 30px 0 0;
+  outline: none;
 }
 
 @media screen and (max-width: 550px) {
@@ -189,6 +176,8 @@ p {
     "main-container main-container main-container main-container"
     "main-container main-container main-container main-container"
     "main-container main-container main-container main-container"
+    "display-container display-container display-container display-container"
+    "display-container display-container display-container display-container"
     "display-container display-container display-container display-container"
     "display-container display-container display-container display-container";
   margin: 0 auto;
@@ -204,25 +193,30 @@ p {
     grid-area: display-container;
   }
 
+  .title-input {
+    font-size: 34px;
+    text-align: center;
+  }
+
   .input-container {
-    margin: 0 auto;
+    margin: 50px auto;
     position: relative;
     width: 80%;
   }
 
-  .main-URL-input-field,
-  .title-input-field {
+  .input-field-styling {
     color: #445A64;
     font-size: 25px;
     height: 45px;
-    margin: 10px 19px;
+    margin: 10px auto;
     outline: none;
-    width: 90%;
+    width: 100%;
   }
   
   .button-style {
-    margin: 10px 0 10px .9em;
-    /*margin-left: 20px;*/
+    margin: 10px 0 10px 0;
+    width: 100%;
+    
   }
   .card-button { 
     font-size: 12px;
